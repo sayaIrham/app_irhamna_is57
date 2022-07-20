@@ -233,6 +233,20 @@
           
           
           <li class="nav-header">EXAMPLES</li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Tables
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a class="nav-link @yield('navkj')" aria-current="page" href="/tugas"><span class="menu-title">TUGAS</span> </a></li>
+              <li class="nav-item"> <a class="nav-link @yield('navlay')" aria-current="page" href="/petugas"><span class="menu-title">PETUGAS</span></a></li>
+            </ul>
+          </li>
       
 
           
