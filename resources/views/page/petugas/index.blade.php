@@ -1,3 +1,4 @@
+
 @extends('layouts.admin')
 
 @section('content')
@@ -22,9 +23,12 @@
       </div><!-- /.container-fluid -->
     </div>
 <div class="container  bg-white mt-3 p-4">
-    {{-- <h1>Data Jurusan</h1> --}}
+    {{-- <h1>Data Petugas</h1> --}} @can('create',App\Tugas::class)  
+
     <a href="/petugas/form" class="btn btn-primary">Tambah Data</a>
+    @endcan
     <br>
+
     <br>
     <div class="card">
         <div class="card-header">
@@ -34,12 +38,12 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">NO</th>
                     <th scope="col">NIK</th>
-                    <th scope="col">Nama Petugas</th>
-                    <th scope="col">Tugas</th>
-                    <th scope="col">No Hp</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">NAMA PETUGAS</th>
+                    <th scope="col">TUGAS</th>
+                    <th scope="col">HP</th>
+                    @can('create',App\Tugas::class)      <th scope="col">Action</th>@endcan
                     </tr>
                 </thead>
                 <tbody>
@@ -53,14 +57,14 @@
                             <td>
                             
                                 <!-- Modal Foto -->
-                               
+                                @can('create',App\Tugas::class) 
 
-                                <a href="/petugas/edit/{{$item->id}}" class="btn btn-success btn-sm">edit</a>
+                                <a href="/petugas/edit/{{$item->id}}" class="btn btn-success btn-sm">Edit</a>
                                 
                                 <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal{{$item->id}}">
-                                    hapus
+                                    Hapus
                                 </button>
-
+                                @endcan
                                 <!-- Modal Hapus -->
                                 <div class="modal fade" id="exampleModal{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">

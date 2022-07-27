@@ -243,7 +243,7 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item"> <a class="nav-link @yield('navkj')" aria-current="page" href="/tugas"><span class="menu-title">TUGAS</span> </a></li>
+              @can('create',App\Tugas::class)     <li class="nav-item"> <a class="nav-link @yield('navkj')" aria-current="page" href="/tugas"><span class="menu-title">TUGAS</span> </a></li> @endcan
               <li class="nav-item"> <a class="nav-link @yield('navlay')" aria-current="page" href="/petugas"><span class="menu-title">PETUGAS</span></a></li>
             </ul>
           </li>
@@ -273,7 +273,7 @@
  @yield('content')
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    <strong>Copyright &copy; 2021-2022 <a href="https://adminlte.io">Irhamna</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.2.0
@@ -297,7 +297,7 @@ aria-hidden="true">
                 <span aria-hidden="true">×</span>
             </button>
         </div>
-        <div class="modal-body">Serius Anda yakin ingin  Logout.</div>
+        <div class="modal-body">Anda Yakin Ingin LogOut Sekarang?.</div>
         <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
             <a class="btn btn-primary" href="{{ route('logout') }}"
